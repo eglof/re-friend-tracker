@@ -1,7 +1,6 @@
 import { formatDiagnostic } from "typescript";
 
 export class GuiModel {
-
     /* HINWEIS: Texte sind in der Datei ../example-translation-service.ts definiert.
     Erscheinen Texte in {}, so kann die Übersetzung in example-translation-service.ts definiert werden
     */
