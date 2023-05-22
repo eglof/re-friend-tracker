@@ -1,6 +1,7 @@
 import { formatDiagnostic } from "typescript";
 
 export class GuiModel {
+
     /* HINWEIS: Texte sind in der Datei ../example-translation-service.ts definiert.
     Erscheinen Texte in {}, so kann die Übersetzung in example-translation-service.ts definiert werden
     */
@@ -44,7 +45,7 @@ export class GuiModel {
                             "width": 2
                         },
                         {
-                            "id": "location",
+                            "id":   "location",
                             "type": "autocomplete",
                             "name": "Location",
                             "url": "/location",
@@ -106,35 +107,6 @@ export class GuiModel {
                     ]
                 },
                 {
-                    "id": "AddActivityForm",
-                    "title": "Activity",
-                    "url": "/friend/:friendKey/activity",
-                    "formFieldList": [
-                        {
-                            "id": "activity",
-                            "type": "autocomplete",
-                            "name": "Activity",
-                            "url": "/activity",
-                            "defaultKey": "activityKey",
-                            "readonly": true,
-                            "form": "ActivityForm",
-                            "width": 2
-                        },
-                        {
-                            "type": "deleteButton",
-                            "name": "Delete"
-                        },
-                        {
-                            "type": "cancelButton",
-                            "name": "Cancel"
-                        },
-                        {
-                            "type": "okButton",
-                            "name": "Ok"
-                        }
-                    ]
-                },
-                {
                     "id": "ActivityForm",
                     "title": "Activity",
                     "url": "/activity",
@@ -166,6 +138,35 @@ export class GuiModel {
                             "name": "Comments",
                             "width": 1,
                             "required": false
+                        },
+                        {
+                            "type": "deleteButton",
+                            "name": "Delete"
+                        },
+                        {
+                            "type": "cancelButton",
+                            "name": "Cancel"
+                        },
+                        {
+                            "type": "okButton",
+                            "name": "Ok"
+                        }
+                    ]
+                },
+                {
+                    "id": "AddActivityForm",
+                    "title": "Activity",
+                    "url": "/friend/:friendKey/activity",
+                    "formFieldList": [
+                        {
+                            "id":   "activity",
+                            "type": "autocomplete",
+                            "name": "Activity",
+                            "url": "/activity",
+                            "defaultKey": "activityKey",
+                            "readonly": true,
+                            "form": "ActivityForm",
+                            "width": 2
                         },
                         {
                             "type": "deleteButton",
@@ -239,9 +240,8 @@ export class GuiModel {
                             "name": "Activities",
                             "icon": "fa-users",
                             "color": "green",
-                            "page": "activitypage",
+                            "page": "activityspage",
                         },
-
                     ]
                 },
                 {
@@ -279,7 +279,7 @@ export class GuiModel {
                             "type": "button",
                             "name": "EditFriend",
                             "icon": "fa-pen",
-                            "color": "light-blue",
+                            "color": "orange",
                             "form": {
                                 "form": "FriendForm"
                             }
@@ -332,7 +332,7 @@ export class GuiModel {
                             "type": "button",
                             "name": "EditLocation",
                             "icon": "fa-pen",
-                            "color": "light-blue",
+                            "color": "orange",
                             "form": {
                                 "form": "LocationForm"
                             }
@@ -377,7 +377,7 @@ export class GuiModel {
                     ]
                 },
                 {
-                    "id": "activitypage",
+                    "id": "activityspage",
                     "elementList": [
                         {
                             "type": "backbutton",
@@ -385,7 +385,7 @@ export class GuiModel {
                         {
                             "type": "newButton",
                             "name": "NewActivity",
-                            "icon": "fa-weixin",
+                            "icon": "fa-people",
                             "color": "brown",
                             "width": 2,
                             "form": {
@@ -394,8 +394,8 @@ export class GuiModel {
                         },
                         {
                             "type": "list",
-                            "icon": "fa-hiking",
-                            "color": "light-blue",
+                            "icon": "fa-people",
+                            "color": "orange",
                             "search": true,
                             "url": "/activity",
                             "page": "activitypage"
@@ -419,7 +419,7 @@ export class GuiModel {
                         },
                         {
                             "type": "list",
-                            "icon": "fa-hiking",
+                            "icon": "fa-people",
                             "color": "blue",
                             "search": true,
                             "url": "/activity/:activityKey/friend",
